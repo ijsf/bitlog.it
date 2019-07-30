@@ -40,7 +40,11 @@ Each computer, called a node, has an identifier that starts with 000 for the bot
 Hello World
 ===========
 
-Now that we know a bit about the GA144, let's write our first piece of code that performs the following calculation: `3(x+1)`. We will place our code at block 860, which lies in the area that is available for user code. `860<space>edit<space>` This opens up the editor and greets us with an empty block:
+Now that we know a bit about the GA144, let's write our first piece of code that performs the following calculation: `3(x+1)`. We will place our code at block 860, which lies in the area that is available for user code.
+
+    860<space>edit<space>
+
+This opens up the editor and greets us with an empty block:
   
 [![block860](http://bitlog.it/wp-content/uploads/2014/12/block860-300x225.png)](http://bitlog.it/wp-content/uploads/2014/12/block860.png)
 
@@ -60,7 +64,8 @@ If you know assembly, then you will understand the yellow 0 org part. Whatever c
 
 Let's first code the mul word:
 
-    <i>mul<space>a!<space>0<space>17<space><esc><u>for<space><esc><o>+\*<space><esc><u>unext<space>drop<space>drop<space><esc><o>a<space>;<space><esc>
+    <i>mul<space>a!<space>0<space>17<space><esc><u>for<space><esc><o>+\*
+    <space><esc><u>unext<space>drop<space>drop<space><esc><o>a<space>;<space><esc>
   
 [![mul](http://bitlog.it/wp-content/uploads/2014/12/mul.jpg)](http://bitlog.it/wp-content/uploads/2014/12/mul.jpg)
 
