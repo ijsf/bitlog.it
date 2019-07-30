@@ -12,19 +12,19 @@ The real world often works a little bit different though. Shortly after I did th
 
 Some dangerous oversights, also pointed out by some careful readers:
 
--   ****Don't use scrapped batteries!****
+-   **Don't use scrapped batteries!**
 
     The 18650 cells were apparently never used, but some were at dangerously low voltages, indicating internal chemical failure or expiration. Charging these could have been disastrous.
 
--   ****Don't use unprotected batteries!****
+-   **Don't use unprotected batteries!**
 
     The 18650 cells were part of a specialized pack manufactured and sealed by Panasonic. The cells themselves did not contain any protection mechanisms, as they were included on the charger PCB (which was promptly discarded). Overcharging or shorting could have been disastrous.
 
--   ****Don't use connectors unsuited for batteries!****
+-   **Don't use connectors unsuited for batteries!**
 
     The DIY pack contained a simple female DC barrel jack that could be used for both charging and discharging. When the cells were charged, plugging in the jack would cause sparks. It would've been difficult but possible for the positive and negative leads (and thus the cells) to shorten out if mishandled.
 
--   ****Keep it stupid simple!****
+-   **Keep it stupid simple!**
 
     The DIY pack was meant for both charging and discharging, relied on a cheap battery management PCB to do the job and provide protection, and was then sealed. It tried to do too much and thus became unsafe as there were too many weak links to fail.
 
