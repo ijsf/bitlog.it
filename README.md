@@ -19,4 +19,9 @@ Here's our index:
 
 Any questions? Head over to our [repository](https://github.com/ijsf/bitlog.it).
 
+Contributors:
+
+* Oguz Meteer // [guztech](https://github.com/guztech)
+* Cecill Etheredge // [ijsf](https://ijsf.nl)
+
 © Combined Efforts, 2014 - 2019. All rights reserved.
