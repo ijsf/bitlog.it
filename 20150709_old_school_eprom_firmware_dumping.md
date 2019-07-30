@@ -4,6 +4,8 @@ _2015/07/09 Cecill Etheredge // ijsf_
 
 ---
 
+Update: Check out the follow-up to this article, [Fixing firmware bugs from 1987 in 2017](20170102_fixing_firmware_bugs_from_1987_in_2017.html).
+
 A few years ago, I managed to get hold of something I only barely knew as a Wersi MK1, an extremely rare West-German synth from 1986. The MK1 faded into obscurity due to its notoriously difficult interface, bad marketing and manufacturer bankruptcies. But in fact, it was one of the first incredibly well engineered digital wavetable synths in a world that was dominated by analog circuitry, and contained a whopping 20 Zilog CPUs to generate its sound.
 
 **TL;DR:** Source code is available at [https://github.com/ijsf/lpc2148-eprom-reader](https://github.com/ijsf/lpc2148-eprom-reader)
@@ -152,4 +154,3 @@ Then, everything came together and I managed to dump my 1987 firmware!
 
 In retrospect, this entire journey took about half a day, 75% of which was spent setting up the toolchain and working out weird issues with the J-Link. Amazingly, once everything was hooked up and working, it all went pretty smooth from there.
 
-_Update:_ To read all about how I used this to fix some firmware bugs in the Wersi MK1, see [Fixing firmware bugs from 1987 in 2017](20170102_fixing_firmware_bugs_from_1987_in_2017.html).
