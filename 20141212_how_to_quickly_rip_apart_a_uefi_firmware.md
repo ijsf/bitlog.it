@@ -14,13 +14,13 @@ As it appears, the S-ATA controller inside the CF-19's ICH9M chipset is normally
 
 From an electric engineer's point-of-view, the solution can be quite easy: just throttle the entire system to reduce its thermal output. The chipset datasheet shows us how:
 
-![pxsctl](http://bitlog.it/wp-content/uploads/2014/12/pxsctl.png)
+![pxsctl](images/20141212-pxsctl.png)
 
 Now, UEFI firmwares are built using elaborate development kits from companies such as American Megatrends or Phoenix Technologies, and contain vendor-specific driver code in something called the [Driver eXecution Environment](http://wiki.phoenix.com/wiki/index.php/DXE).
 
 A quick dissection of the CF-19's UEFI firmware, which has been built using the American Megatrends Aptio development kit, shows us (among many other hidden gems) the following UEFI DXE driver:
 
-![mmtool](http://bitlog.it/wp-content/uploads/2014/12/mmtool2.png)
+![mmtool2](images/20141212-mmtool2.png)
 
 This list, generated with AMI's Aptio MMTool, alone will give anyone a good insight into the low-level functionality of your own machine. The DXE drivers themselves are built in a PE-compatible executable format called TE, for which we will save [the reverse engineering](http://ho.ax/posts/2012/09/ida-pro-scripts-for-efi-reversing/) for another time.
 
