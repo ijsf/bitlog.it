@@ -18,7 +18,7 @@ In our previous post, I gave a brief introduction on how to create simple combin
 Fixing the bug
 ==============
 
-Continuing from where we [left off last time](https://bitlog.it/hardware/a-basic-introduction-to-clash-for-fpga-development/), let's fix the bug in our previous circular stack implementation. Open up [Example1.hs](https://github.com/GuzTech/bitlog_clash_tutorial/tree/master/part_2/Example1.hs) where I have the same implementation we ended up with previously called ***stack2***. For viewing convenience, I'll post it here as well:
+Continuing from where we [left off last time](20180320_a_basic_introduction_to_clash_for_fpga_development_part_1.md), let's fix the bug in our previous circular stack implementation. Open up [Example1.hs](https://github.com/GuzTech/bitlog_clash_tutorial/tree/master/part_2/Example1.hs) where I have the same implementation we ended up with previously called ***stack2***. For viewing convenience, I'll post it here as well:
 
 ```
 module Example1 where
