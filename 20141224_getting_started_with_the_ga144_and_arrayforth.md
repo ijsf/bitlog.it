@@ -12,7 +12,7 @@ The GA144 chip by GreenArrays is unique in several ways:
 
 Even though there is adequate documentation, getting started with this chip can still be quite daunting. There are a couple of tutorials on the internet, but they are written for older versions of arrayForth and do not work with the latest version. Essential information is spread out throughout the documentation, so think again if you want to start with the GA144 quickly. Especially when you have to program the chip with an IDE that looks like this:
 
-[!<img src="images/20141224_codeediting.jpg" width="300">](images/20141224_codeediting.jpg)
+[<img src="images/20141224_codeediting.jpg" width="300">](images/20141224_codeediting.jpg)
 
 Do not worry however, as I will explain in this post how to write a Hello World example and get it running on the simulator, with emphasis on the last part as I will not go into details of the chip works. I do expect you to have some experience with Forth and its stack based nature. Also, please read the [arrayForth user manual](http://www.greenarraychips.com/home/documents/greg/DB004-131030-aFUSER.pdf) as it is very useful for getting a feeling for arrayForth. More links to interesting information about the GA144 can be found at the end of this post (highly recommended!).
 
@@ -21,7 +21,7 @@ First launch
 
 When you first launch arrayForth, you are greeted with the following screen:
 
-[![startscreen](images/20141224_startscreen.jpg | width=300)](images/20141224_startscreen.jpg)
+[<img src="images/20141224_startscreen.jpg" width="300">](images/20141224_startscreen.jpg)
 
 Something you should know about arrayForth is that it uses a specific keyboard layout for entering different kinds and colors of syntax (hence colorForth). On page 13, chapter 3 of the arrayForth user manual, you can find the layout used while you are in the editor. Before we start writing our Hello World example, we need to know how memory is organized, where we put our code, which nodes run which block of code, etc.
 
@@ -33,7 +33,7 @@ Memory in arrayForth is organized in 1400 blocks, some which contain system soft
 
 The GA144 chip consists of 144 F18 computers in a grid of 18x8:
 
-[![GA144](images/20141224_GA144-300x232.jpg)](images/20141224_GA144.jpg)
+[<img src="images/20141224_GA144.jpg" width="300">](images/20141224_GA144.jpg)
 
 Each computer, called a node, has an identifier that starts with 000 for the bottom left node and ends with 717 for the top right node. Each node is connected to its neighbor nodes. The outermost nodes are connected to the outside world, either directly, or through peripherals such as UART, SPI, ADC, etc. Therefore, you need to carefully plan the layout of your application.
 
@@ -46,7 +46,7 @@ Now that we know a bit about the GA144, let's write our first piece of code that
 
 This opens up the editor and greets us with an empty block:
   
-[![block860](images/20141224_block860-300x225.png)](images/20141224_block860.png)
+[<img src="images/20141224_block860.png" width="300">](images/20141224_block860.png)
 
 Type the following:
 
@@ -118,7 +118,7 @@ And add the following code before the line that starts with the comment "rom wri
 
 Block 216 now looks like this:
 
-[![block 216](images/20141224_block-216-300x225.jpg)](images/20141224_block-216.jpg)
+[<img src="images/20141224_block-216.jpg" width="300">](images/20141224_block-216.jpg)
 
 Now the correct entry point for node 404 has been set, and we are ready to run our code in the simulator!
 
@@ -127,7 +127,7 @@ Running The Simulator
 
 Type so (or softsim) en press space to start the simulator.
 
-[![simulator](images/20141224_simulator-300x225.jpg)](images/20141224_simulator.jpg)
+[<img src="images/20141224_simulator.jpg" width="300">](images/20141224_simulator.jpg)
 
 Page 33, chapter 7 of the arrayForth user manual explains how the simulator works, but I'll give a short explanation.
 
@@ -158,7 +158,7 @@ Running our code
 
 If we place the red X on node 404, and adjust the blue rectangle to include node 404, we can see what happens with the node that we want to run our example on:
 
-[![simexample](images/20141224_simexample-300x225.jpg)](images/20141224_simexample.jpg)
+[<img src="images/20141224_simexample.jpg" width="300">](images/20141224_simexample.jpg)
 
 If we step through the code by pressing n repeatedly, we can see that node 404 executes our code:
 
