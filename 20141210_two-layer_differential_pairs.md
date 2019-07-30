@@ -1,6 +1,6 @@
-# Two layer differential pairs
+# Two-layer differential pairs
 
-###### 2014/12/10 Cecill Etheredge // ijsf
+_2014/12/10 Cecill Etheredge // ijsf_
 
 ---
 
