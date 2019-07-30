@@ -33,7 +33,7 @@ Memory in arrayForth is organized in 1400 blocks, some which contain system soft
 
 The GA144 chip consists of 144 F18 computers in a grid of 18x8:
 
-[<img src="images/20141224_GA144.jpg" width="300">](images/20141224_GA144.jpg)
+[<img src="images/20141224_ga144.jpg" width="300">](images/20141224_GA144.jpg)
 
 Each computer, called a node, has an identifier that starts with 000 for the bottom left node and ends with 717 for the top right node. Each node is connected to its neighbor nodes. The outermost nodes are connected to the outside world, either directly, or through peripherals such as UART, SPI, ADC, etc. Therefore, you need to carefully plan the layout of your application.
 
@@ -58,7 +58,7 @@ Your screen should now look like this (bottom part is left out):
 
 If you know assembly, then you will understand the yellow 0 org part. Whatever comes after that will be placed at memory location 0 and up. The blue br is an editor command that is not compiled into executable code, but rather tells the editor to insert two new lines. If it was cr, then only one line new line would have been added. Next up, we will define three words (functions if you will): setup, calc, and mul.
 
-* setup will give the variable x in our formula 3(x+1) a value and store it in register a.
+* setup will give the variable x in our formula `3(x+1)` a value and store it in register a.
 * calc will retrieve the value in register a, add one to it, and multiply it by three.
 * mul is a function that performs the 18-bit multiplication as the F18 computer does not have a single multiply instruction. For more information, check the [excellent post about multiplication by Ashley Nathan Feniello](https://github.com/AshleyF/Color/blob/master/Docs/multiply_step.md).
 
