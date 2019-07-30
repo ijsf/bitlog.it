@@ -4,6 +4,13 @@ _2018/05/14 Oguz Meteer // guztech_
 
 ---
 
+***This post is part of a series:***
+
+* [Part 1 - Basic introduction to combinatorial logic](20180320_a_basic_introduction_to_clash_for_fpga_development_part_1.md)
+* [Part 2 - Bug fixes, much cleaner code, simulation, synchronous logic, and test benches](20180514_a_basic_introduction_to_clash_for_fpga_development_part_2.md)
+
+---
+
 In our previous post, I gave a brief introduction on how to create simple combinatorial hardware in Clash and we ended up with a partly working, ugly circular stack implementation. In this post we will fix the bug, tidy up the code to make it much nicer to read, and simulate our design.
 
 ***Reminder:*** All the code for this post and future posts can be found on [GitLab](https://gitlab.com/GuzTech/bitlog_clash_tutorial) and [Github](https://github.com/GuzTech/bitlog_clash_tutorial/tree/master/). The code for this part is in the [part\_2](https://github.com/GuzTech/bitlog_clash_tutorial/tree/master/part_2) folder.
