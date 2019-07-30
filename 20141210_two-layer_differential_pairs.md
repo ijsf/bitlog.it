@@ -1,6 +1,6 @@
-# Common knowledge and two layer differential pairs
+# Two layer differential pairs
 
-2014/12/10 // Cecill Etheredge // ijsf
+    2014/12/10 Cecill Etheredge // ijsf
 
 ---
 
