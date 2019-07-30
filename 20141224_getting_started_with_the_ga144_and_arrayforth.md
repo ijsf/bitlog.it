@@ -42,7 +42,7 @@ Hello World
 
 Now that we know a bit about the GA144, let's write our first piece of code that performs the following calculation: `3(x+1)`. We will place our code at block 860, which lies in the area that is available for user code.
 
-    860<space>edit<space>
+  860<space>edit<space>
 
 This opens up the editor and greets us with an empty block:
   
@@ -50,7 +50,7 @@ This opens up the editor and greets us with an empty block:
 
 Type the following:
 
-    <u>0<space>org<space><esc><x>br<space><esc>
+  <u>0<space>org<space><esc><x>br<space><esc>
   
 Your screen should now look like this (bottom part is left out):
 
@@ -64,26 +64,26 @@ If you know assembly, then you will understand the yellow 0 org part. Whatever c
 
 Let's first code the mul word:
 
-    <i>mul<space>a!<space>0<space>17<space><esc><u>for<space><esc><o>+\*
-    <space><esc><u>unext<space>drop<space>drop<space><esc><o>a<space>;<space><esc>
+  <i>mul<space>a!<space>0<space>17<space><esc><u>for<space><esc><o>+\*
+  <space><esc><u>unext<space>drop<space>drop<space><esc><o>a<space>;<space><esc>
   
 [![mul](http://bitlog.it/wp-content/uploads/2014/12/mul.jpg)](http://bitlog.it/wp-content/uploads/2014/12/mul.jpg)
 
 Next up is the calc word:
 
-    <i>calc<space>a<space>1<space>+<space>3<space>mul<space>;<space><esc>
+  <i>calc<space>a<space>1<space>+<space>3<space>mul<space>;<space><esc>
 
 [![calc](http://bitlog.it/wp-content/uploads/2014/12/calc.jpg)](http://bitlog.it/wp-content/uploads/2014/12/calc.jpg)
 
 The final word is setup:
 
-    <i>setup<space>4<space>a!<space>calc<space>;<space><esc><x>br<space><esc>
+  <i>setup<space>4<space>a!<space>calc<space>;<space><esc><x>br<space><esc>
 
 [![setup](http://bitlog.it/wp-content/uploads/2014/12/setup.jpg)](http://bitlog.it/wp-content/uploads/2014/12/setup.jpg)
 
 In this case, I have chosen x = 4, which will result in 3(4+1) = 15 = 0x0F in hex. We are almost done! Last part of our Hello World example is to make sure that the entry point of our program (setup) is called when a node is loaded with our code. We can set it like this:
 
-    <u><F1>0a9<space><F1>org<space><esc><o>setup<space>;<space><esc>
+  <u><F1>0a9<space><F1>org<space><esc><o>setup<space>;<space><esc>
 
 Thıs gives us the final line of our code, and places the entry point to our code at address 0xA9 where setup will be called. 
 
@@ -98,7 +98,7 @@ So we have written code, but how do we get it into one of the nodes? This is the
 
 We will be placing the loading instructions after the first line:
 
-    <u>400<space>node<space>860<space>load<space><esc><x>br<space><esc>
+  <u>400<space>node<space>860<space>load<space><esc><x>br<space><esc>
 
 This line selects node 404, and loads block 860 in it. How it looks:
 
@@ -110,11 +110,11 @@ You can repeat this step if you want to place the same block in another node (ru
 
 Open up block 216:
 
-    216<space>edit<space>
+  216<space>edit<space>
 
 And add the following code before the line that starts with the comment "rom write test 200 +node 13 /p,":
 
-    <u><F1>0a9<space><F1>404<space>enter<space><esc><x>br<space><esc>
+  <u><F1>0a9<space><F1>404<space>enter<space><esc><x>br<space><esc>
 
 Block 216 now looks like this:
 
