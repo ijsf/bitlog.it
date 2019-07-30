@@ -6,8 +6,10 @@ _2018/03/20 Oguz Meteer // guztech_
 
 ***This post is part of a series:***
 
-* [A Basic Introduction to Clash for FPGA Development - Part 1](20180320_a_basic_introduction_to_clash_for_fpga_development_part_1.md)
-* [A Basic Introduction to Clash for FPGA Development - Part 2](20180514_a_basic_introduction_to_clash_for_fpga_development_part_2.md)
+* [Part 1 - Basic introduction to combinatorial logic](20180320_a_basic_introduction_to_clash_for_fpga_development_part_1.md)
+* [Part 2 - Bug fixes, much cleaner code, simulation, synchronous logic, and test benches](20180514_a_basic_introduction_to_clash_for_fpga_development_part_2.md)
+
+---
 
 For FPGA development, VHDL was my default language for a while. That started to shift towards Verilog when I discovered [Yosys-SMTBMC](http://www.clifford.at/papers/2016/yosys-smtbmc/) created by [Clifford Wolf](http://www.clifford.at/), which is a formal verification tool for hardware. However, recently I've been exploring other HDL languages and one that peaked my interest is [Clash](http://www.clash-lang.org/). It stands for *[CAES](https://www.utwente.nl/en/eemcs/caes/) Language for Synchronous Hardware*, and it is built upon Haskell. Its compiler is [open-source](https://github.com/clash-lang/clash-compiler) and is mainly developed by the people at [QBayLogic](https://qbaylogic.com). Since I am doing my PhD at the [CAES](https://www.utwente.nl/en/eemcs/caes/) group at the [University of Twente](https://www.utwente.nl/), it might seem as an obvious choice to explore Clash. But having very little experience with functional programming, this seemed challenging to me. Could I really develop hardware in a language that is very foreign to me?
 
