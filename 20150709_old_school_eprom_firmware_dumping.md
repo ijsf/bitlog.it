@@ -10,29 +10,29 @@ A few years ago, I managed to get hold of something I only barely knew as a Wers
 
 In an effort to figure out how this beast works, I've been diving deep into the hardware schematics, and I've reached a point where firmware disassembly is necessary to figure out more about this incredible piece of hardware. Of course.. the firmware is safely locked in a chip that is more than 30 years old. Let's see.
 
-#### Getting to the chip
+## Getting to the chip
 
 To get down to reverse engineering the software internals, it will be necessary to be able to access the contents of the firmware. These contents are generally stored in a programmable ROM type chip that can be found somewhere on the board.
 
-![20150708_140226](http://bitlog.it/wp-content/uploads/2015/07/20150708_1402261-1024x768.jpg)
+![20150708_140226](images/20150708_1402261.jpg)
 
 The first step is to identify the firmware and corresponding chip. On the Wersi mainboard, it is marked as "PROGR. ROM" (Program ROM), and after lifting the DIP-socket chip it was pretty easy to identify both the chip and the engineer's scribbles on the paper marking that came of after 28 years of use.
 
-[![20150708_140607](http://bitlog.it/wp-content/uploads/2015/07/20150708_140607-1024x768.jpg)](http://bitlog.it/wp-content/uploads/2015/07/20150708_140607.jpg)
+![20150708_140607](images/20150708_140607.jpg)
 
 As can be seen in the photo, the chip is an Intel D27256-3 with date code 1982, and the engineering comments read "MK1/EX20 IC3 630469W AF21 15.4.87", marking the firmware version AF21 likely produced on the 15th of April 1987. The actual version number of this firmware is V1.21, as the synth does mention this on bootup.
 
 The Intel D27256-3 is a standard 27-series 256Kbit UV-Erasable PROM with around 200ns (5 MHz) access time, 15 address lines, 8 data lines, 2 enable lines and TTL-compatible signaling.
 
-#### What next?
+## What next?
 
 Now, since I don't have an (E)EPROM programmer, I'll be forced to use whatever is on the shelf to extract the data from this piece of silicon. Perhaps more importantly is the fact that I want to be able to do patches to the synth's firmware, and as I do not have a programmer nor an EPROM eraser (these chips are reset to all-1's by certain UV light, hence the glass at the top), I'm left with few options.
 
 Actually, the only "easy" way forward at this point is to build a fully compatible 27-series PROM emulator. A piece of hardware that sits in place of the EPROM chip on the board, and emulates its signaling. The Wersi mainboard uses 5V TTL signaling, abd sources have told me it does accept 3.3V on the lines (typically 2.0V volt minimum for HIGH bits) as well. Fortunately I have an unused LPC2148 board available that happens to output at 3.3V, but has 5V tolerant inputs, so that seems like a perfect fit. But first things first.. reading out that PROM.
 
-[![20150709_124356](http://bitlog.it/wp-content/uploads/2015/07/20150709_124356-1024x768.jpg)](http://bitlog.it/wp-content/uploads/2015/07/20150709_124356.jpg)
+![20150709_124356](images/20150709_124356.jpg)
 
-### Getting the LPC2148 to work
+## Getting the LPC2148 to work
 
 The LPC2148 board is actually a quite nice tool to use for this purpose. It contains a USB subsystem and can thus be programmed to function as a USB serial console to dump out the firmware contents. Also, the Intel D27256 requires a supply voltage of 5V which the LPC2148 board can happily supply (remember USB is 5V, so yeah).
 
@@ -61,11 +61,11 @@ Sources say that running the official Segger J-Link software beforehand solves t
 7.  Perform debugging, recompilation, etc.
 8.  Go to step 4.
 
-#### Interfacing the EPROM
+## Interfacing the EPROM
 
 The chip interfacing for the 27256-series is quite straightforward. Here is the pin layout for the similar 27128-series EPROM, which has a PGM (program enable) line instead of A14:
 
-[![Screen Shot 2015-07-09 at 1.24.33 AM](http://bitlog.it/wp-content/uploads/2015/07/Screen-Shot-2015-07-09-at-1.24.33-AM.png)](http://bitlog.it/wp-content/uploads/2015/07/Screen-Shot-2015-07-09-at-1.24.33-AM.png)
+![20150709_screenshot1](images/20150709_screenshot1.png)
 
 As can be seen, it is basically just a matter of connecting the address lines, data lines and signal lines to the 5V-tolerant I/O, and providing the supply voltage, which is done as follows:
 
@@ -121,7 +121,7 @@ static U8 eprom_read(U16 address)
 }
 ```
 
-#### Setting up a USB serial link
+## Setting up a USB serial link
 
 Now that the EPROM interface is working, I need an easy and reliable way to dump the firmware contents back to the host machine. As mentioned before, the LPC2148 has a neat USB subsystem that can be put to use for this particular purpose. To start off, I based my code on the LPC2148-compatible [libusb](http://sourceforge.net/p/libusb/) which provides a nice little example that turns the LPC2148 into an echoing USB serial device.
 
@@ -148,7 +148,7 @@ Pretty easy, right? Now I only need a little tool for the host machine that att
 
 Then, everything came together and I managed to dump my 1987 firmware!
 
-[![Screen Shot 2015-07-09 at 2.09.12 AM](http://bitlog.it/wp-content/uploads/2015/07/Screen-Shot-2015-07-09-at-2.09.12-AM.png)](http://bitlog.it/wp-content/uploads/2015/07/Screen-Shot-2015-07-09-at-2.09.12-AM.png)
+![20150709_screenshot2](images/20150709_screenshot2.png)
 
 In retrospect, this entire journey took about half a day, 75% of which was spent setting up the toolchain and working out weird issues with the J-Link. Amazingly, once everything was hooked up and working, it all went pretty smooth from there.
 
