@@ -1,6 +1,6 @@
 # Fixing firmware bugs from 1987 in 2017
 
-_2017/01/02 Cecill Etheredge // ijsf
+_2017/01/02 Cecill Etheredge // ijsf_
 
 ---
 
