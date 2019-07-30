@@ -219,7 +219,7 @@ Below I will shortly explain what happens chronologically. First, the memory add
 2.  put the value stored in register A on the stack
 3.  return
 
-When the last instruction has exectued, we can see that the value 0xF or 15 in decimal on the top of the stack, confirming that our example works correctly! I hope that this post will help filling in the blanks after reading the GreenArrays documentation.
+When the last instruction has executed, we can see that the value 0xF or 15 in decimal on the top of the stack, confirming that our example works correctly! I hope that this post will help filling in the blanks after reading the GreenArrays documentation.
 
 References
 ==========
