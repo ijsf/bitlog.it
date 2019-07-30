@@ -6,9 +6,9 @@ _2014/12/24 Oguz Meteer // guztech_
 
 The GA144 chip by GreenArrays is unique in several ways:
 
-*   It has 144, 18-bit cores.
-*   It is asynchronous, so there is no clock.
-*   It is programmed in [Forth](https://en.wikipedia.org/wiki/Forth_%28programming_language%29), and GreenArrays provides colorForth, a version of arrayForth specifically for the GA144.
+* It has 144, 18-bit cores.
+* It is asynchronous, so there is no clock.
+* It is programmed in [Forth](https://en.wikipedia.org/wiki/Forth_%28programming_language%29), and GreenArrays provides colorForth, a version of arrayForth specifically for the GA144.
 
 Even though there is adequate documentation, getting started with this chip can still be quite daunting. There are a couple of tutorials on the internet, but they are written for older versions of arrayForth and do not work with the latest version. Essential information is spread out throughout the documentation, so think again if you want to start with the GA144 quickly. Especially when you have to program the chip with an IDE that looks like this:
 
@@ -27,24 +27,26 @@ Something you should know about arrayForth is that it uses a specific keyboard l
 
 ### Memory Organization
 
-Memory in arrayForth is organized in 1400 blocks, some which contain system software such as the compiler and simulator, while others contain example code or are simply empty. A summary of how memory blocks are organized can be found on page 18, chapter 4 of the arrayForth user manual, while a detailed overview can be found in the **EVB001-02b.html** file located in the installation folder. We can see that blocks 840 to 1078 can be used to store user **code**. Note that it's not 1079 because only even numbered blocks can contain code, while uneven numbered blocks are used to store user comments.
+Memory in arrayForth is organized in 1400 blocks, some which contain system software such as the compiler and simulator, while others contain example code or are simply empty. A summary of how memory blocks are organized can be found on page 18, chapter 4 of the arrayForth user manual, while a detailed overview can be found in the `EVB001-02b.html` file located in the installation folder. We can see that blocks 840 to 1078 can be used to store user `code`. Note that it's not 1079 because only even numbered blocks can contain code, while uneven numbered blocks are used to store user comments.
 
 ### Node Layout
 
 The GA144 chip consists of 144 F18 computers in a grid of 18x8:
 
-[![GA144](http://bitlog.it/wp-content/uploads/2014/12/GA144-300x232.jpg)](http://bitlog.it/wp-content/uploads/2014/12/GA144.jpg
+[![GA144](http://bitlog.it/wp-content/uploads/2014/12/GA144-300x232.jpg)](http://bitlog.it/wp-content/uploads/2014/12/GA144.jpg)
 
 Each computer, called a node, has an identifier that starts with 000 for the bottom left node and ends with 717 for the top right node. Each node is connected to its neighbor nodes. The outermost nodes are connected to the outside world, either directly, or through peripherals such as UART, SPI, ADC, etc. Therefore, you need to carefully plan the layout of your application.
 
 Hello World
 ===========
 
-Now that we know a bit about the GA144, let's write our first piece of code that performs the following calculation: **3(x+1)**. We will place our code at block 860, which lies in the area that is available for user code. **860<space>edit<space>** This opens up the editor and greets us with an empty block:
+Now that we know a bit about the GA144, let's write our first piece of code that performs the following calculation: `3(x+1)`. We will place our code at block 860, which lies in the area that is available for user code. `860<space>edit<space>` This opens up the editor and greets us with an empty block:
   
 [![block860](http://bitlog.it/wp-content/uploads/2014/12/block860-300x225.png)](http://bitlog.it/wp-content/uploads/2014/12/block860.png)
 
-Type the following: **<u>0<space>org<space><esc><x>br<space><esc>**
+Type the following:
+
+    <u>0<space>org<space><esc><x>br<space><esc>
   
 Your screen should now look like this (bottom part is left out):
 
@@ -58,25 +60,25 @@ If you know assembly, then you will understand the yellow 0 org part. Whatever c
 
 Let's first code the mul word:
 
-** <i>mul<space>a!<space>0<space>17<space><esc><u>for<space><esc><o>+\*<space><esc><u>unext<space>drop<space>drop<space><esc><o>a<space>;<space><esc>**
+    <i>mul<space>a!<space>0<space>17<space><esc><u>for<space><esc><o>+\*<space><esc><u>unext<space>drop<space>drop<space><esc><o>a<space>;<space><esc>
   
 [![mul](http://bitlog.it/wp-content/uploads/2014/12/mul.jpg)](http://bitlog.it/wp-content/uploads/2014/12/mul.jpg)
 
 Next up is the calc word:
 
-**<i>calc<space>a<space>1<space>+<space>3<space>mul<space>;<space><esc>** 
+    <i>calc<space>a<space>1<space>+<space>3<space>mul<space>;<space><esc>
 
 [![calc](http://bitlog.it/wp-content/uploads/2014/12/calc.jpg)](http://bitlog.it/wp-content/uploads/2014/12/calc.jpg)
 
 The final word is setup:
 
-**<i>setup<space>4<space>a!<space>calc<space>;<space><esc><x>br<space><esc>**
+    <i>setup<space>4<space>a!<space>calc<space>;<space><esc><x>br<space><esc>
 
 [![setup](http://bitlog.it/wp-content/uploads/2014/12/setup.jpg)](http://bitlog.it/wp-content/uploads/2014/12/setup.jpg)
 
 In this case, I have chosen x = 4, which will result in 3(4+1) = 15 = 0x0F in hex. We are almost done! Last part of our Hello World example is to make sure that the entry point of our program (setup) is called when a node is loaded with our code. We can set it like this:
 
-**<u><F1>0a9<space><F1>org<space><esc><o>setup<space>;<space><esc>**
+    <u><F1>0a9<space><F1>org<space><esc><o>setup<space>;<space><esc>
 
 Thıs gives us the final line of our code, and places the entry point to our code at address 0xA9 where setup will be called. 
 
@@ -91,7 +93,7 @@ So we have written code, but how do we get it into one of the nodes? This is the
 
 We will be placing the loading instructions after the first line:
 
-**<u>400<space>node<space>860<space>load<space><esc><x>br<space><esc>**
+    <u>400<space>node<space>860<space>load<space><esc><x>br<space><esc>
 
 This line selects node 404, and loads block 860 in it. How it looks:
 
@@ -103,11 +105,11 @@ You can repeat this step if you want to place the same block in another node (ru
 
 Open up block 216:
 
-**216<space>edit<space>**
+    216<space>edit<space>
 
 And add the following code before the line that starts with the comment "rom write test 200 +node 13 /p,":
 
-**<u><F1>0a9<space><F1>404<space>enter<space><esc><x>br<space><esc>**
+    <u><F1>0a9<space><F1>404<space>enter<space><esc><x>br<space><esc>
 
 Block 216 now looks like this:
 
