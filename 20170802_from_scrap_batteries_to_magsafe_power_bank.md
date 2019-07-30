@@ -4,6 +4,8 @@ _2017/08/02 Cecill Etheredge // ijsf_
 
 ---
 
+_Update: Check out the follow-up to this article, [From batteries to MagSafe power bank 2.0](20180427_from_batteries_to_magsafe_power_bank_2_0.md)._
+
 Cleaning up a bunch of stuff in my house, I stumbled upon a unused battery pack for a laptop that gets so little use it's on permanent AC power.
 
 Faced with the chore of having to dispose of these properly, I opted to open it up instead, ignoring the friendly messages on the label that warn of fire, explosion and other injuries when doing so.
