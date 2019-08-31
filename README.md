@@ -1,7 +1,5 @@
 Welcome to our series of articles about all things technology.
 
-Here's our index:
-
 | | | |
 |-|-|-|
 | <img src="thumbs/20141210-pcb1.png" width="120px" /> | [A Basic Introduction to Clash for FPGA Development - Part 2](20180514_a_basic_introduction_to_clash_for_fpga_development_part_2.md) | 2018/05/14 |
