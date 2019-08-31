@@ -17,11 +17,13 @@ Here's our index:
 * 2014/12/12: [How to quickly rip apart a UEFI firmware](20141212_how_to_quickly_rip_apart_a_uefi_firmware.md)
 * 2014/12/10: [Two-layer differential pairs](20141210_two-layer_differential_pairs.md)
 
-Any questions? Head over to our [repository](https://github.com/ijsf/bitlog.it).
+Twitter: [twitter.com/BitlogIT](https://twitter.com/BitlogIT)
 
 Contributors:
 
 * Oguz Meteer // [guztech](https://github.com/guztech)
 * Cecill Etheredge // [ijsf](https://ijsf.nl)
+
+Hosted at [github.com](https://github.com/ijsf/bitlog.it).
 
 © Combined Efforts, 2014 - 2019. All rights reserved.
