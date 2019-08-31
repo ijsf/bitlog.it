@@ -2,9 +2,13 @@ Welcome to our series of articles about all things technology.
 
 Here's our index:
 
-* 2018/05/14: [A Basic Introduction to Clash for FPGA Development - Part 2](20180514_a_basic_introduction_to_clash_for_fpga_development_part_2.md)
-* 2018/04/27: [From batteries to MagSafe power bank 2.0](20180427_from_batteries_to_magsafe_power_bank_2_0.md)
-* 2018/03/20: [A Basic Introduction to Clash for FPGA Development - Part 1](20180320_a_basic_introduction_to_clash_for_fpga_development_part_1.md)
+| | | |
+|-|-|-|
+| <img src="thumbs/20141210-pcb1.png" width="120px" /> | [A Basic Introduction to Clash for FPGA Development - Part 2](20180514_a_basic_introduction_to_clash_for_fpga_development_part_2.md) | 2018/05/14 |
+| <img src="thumbs/20180427_cells.png" width="120px" /> | [From batteries to MagSafe power bank 2.0](20180427_from_batteries_to_magsafe_power_bank_2_0.md) | 2018/04/27 |
+| <img src="thumbs/20180320_clash.png" width="120px" /> | [A Basic Introduction to Clash for FPGA Development - Part 1](20180320_a_basic_introduction_to_clash_for_fpga_development_part_1.md) | 2018/03/20 |
+| | | |
+
 * 2017/11/01: [Injecting rogue code into stock Android ROMs](20171101_injecting_rogue_code_into_stock_android_roms.md)
 * 2017/08/20: [Building embedded Linux for the Terasic DE10-Nano](20170820_building_embedded_linux_for_the_terasic_de10-nano.md)
 * 2017/08/02: [From scrap batteries to MagSafe power bank](20170802_from_scrap_batteries_to_magsafe_power_bank.md)
