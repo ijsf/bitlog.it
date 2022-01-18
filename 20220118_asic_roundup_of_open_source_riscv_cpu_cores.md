@@ -18,8 +18,8 @@ The [award-winning](https://riscv.org/blog/2018/12/risc-v-softcpu-contest-highli
 
 ![SERV v1.10](images/serv110.png)
 
-Maximum clock frequency: **1020 MHz**
-Die area: **0.029584 mm^2**
+- Maximum clock frequency: **1020 MHz**
+- Die area: **0.029584 mm^2**
 
 ## PicoRV32 (RV32E, RV32I, RV32IC, RV32IM, RV32IMC)
 
@@ -27,8 +27,8 @@ The excellent size-optimized [PicoRV32](https://github.com/YosysHQ/picorv32) CPU
 
 ![PicoRV32](images/picorv32.png)
 
-Maximum clock frequency: **806 MHz**
-Die area: **0.0425152 mm^2**
+- Maximum clock frequency: **806 MHz**
+- Die area: **0.0425152 mm^2**
 
 ## Minerva (RV32IM)
 
@@ -36,8 +36,8 @@ The [Minerva](https://github.com/minerva-cpu/minerva) CPU by [Lambda Concept](ht
 
 ![Minerva](images/minerva.png)
 
-Maximum clock frequency: **625 MHz**
-Die area: **0.051076 mm^2**
+- Maximum clock frequency: **625 MHz**
+- Die area: **0.051076 mm^2**
 
 
 - - -
