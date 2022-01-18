@@ -9,17 +9,18 @@ While waiting for simulation results for my final paper, I thought I'd synthesiz
 - All CPU cores were synthesized using a well known 65 nm PDK.
 - Synopsys Design Compiler with *ultra* effort was used for synthesis.
 - Cadence Innovus was used for place & route.
-- A standard I/O template was generated with Innovus with a square floorplan.
+- A standard I/O template was generated with Innovus with a square floorplan. This means that the area is most likely not used efficiently which will affect the utilization and maximum clock frequency.
 - Only the CPU core with the register file and a standardized bus (Wishbone, AXI, AHB, etc.) was taken into account. No full SoCs were used to make the comparisons more fair.
 
 ## SERV (RV32I, RV32IM, RV32Zicsr)
 
-The [award-winning](https://riscv.org/blog/2018/12/risc-v-softcpu-contest-highlights/) [SERV](https://github.com/olofk/serv) CPU by [Olof Kindgren](https://twitter.com/OlofKindgren) is a bit-serial RISC-V CPU that is focussed on being as minimal as possible. It may not be the fastest CPU, but it is indeed the smallest RISC-V CPU in this roundup (and possible ever). Here, I used [SERV version 1.1.0](https://github.com/olofk/serv/tree/1.1.0) with the default configuration (rv32i).
+The [award-winning](https://riscv.org/blog/2018/12/risc-v-softcpu-contest-highlights/) [SERV](https://github.com/olofk/serv) CPU by [Olof Kindgren](https://twitter.com/OlofKindgren) is a bit-serial RISC-V CPU that is focussed on being as minimal as possible. It may not be the fastest CPU, but it is indeed the smallest RISC-V CPU in this roundup (tied with the [FemtoRV32-quark](#Quark) found further down in this post). Here, I used [SERV version 1.1.0](https://github.com/olofk/serv/tree/1.1.0) with the default configuration (rv32i).
 
 ![SERV v1.10](images/serv110.png)
 
 - Maximum clock frequency: **1020 MHz**
 - Die area: **0.029584 mm^2**
+- Utilization rate: **78.868%**
 
 ## PicoRV32 (RV32E, RV32I, RV32IC, RV32IM, RV32IMC)
 
@@ -29,6 +30,7 @@ The excellent size-optimized [PicoRV32](https://github.com/YosysHQ/picorv32) CPU
 
 - Maximum clock frequency: **806 MHz**
 - Die area: **0.0425152 mm^2**
+- Utilization rate: **77.703%**
 
 ## Minerva (RV32IM)
 
@@ -38,6 +40,7 @@ The [Minerva](https://github.com/minerva-cpu/minerva) CPU by [Lambda Concept](ht
 
 - Maximum clock frequency: **625 MHz**
 - Die area: **0.051076 mm^2**
+- Utilization rate: **80.435%**
 
 ## (WIP) Hazard3 (RV32I + M, C, A, Zicsr, Zba, Zbb, Zbc, Zbs)
 
@@ -59,6 +62,7 @@ The [Hazard3](https://github.com/Wren6991/Hazard3) CPU core by [Luke Wren](https
 
 - Maximum clock frequency: ** MHz**
 - Die area: ** mm^2**
+- Utilization rate: **%**
 
 ## (WIP) FemtoRV32 (RV32I, RV32IM, RV32IM, RV32IMC, RV32IMFC)
 
@@ -69,7 +73,8 @@ The [FemtoRV32](https://github.com/BrunoLevy/learn-fpga/tree/master/FemtoRV) CPU
 ![FemtoRV32-quark](images/femtorv32_quark.png)
 
 - Maximum clock frequency: ** MHz**
-- Die area: ** mm^2**
+- Die area: **0.029584 mm^2**
+- Utilization rate: **81.433%**
 
 ### Petitbateau
 
@@ -77,6 +82,7 @@ The [FemtoRV32](https://github.com/BrunoLevy/learn-fpga/tree/master/FemtoRV) CPU
 
 - Maximum clock frequency: ** MHz**
 - Die area: ** mm^2**
+- Utilization rate: **%**
 
 - - -
 
