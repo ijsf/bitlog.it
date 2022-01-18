@@ -18,7 +18,7 @@ Also, since I went for the maximum clock speed, it increases the area quite a bi
 
 ## SERV (RV32I, RV32IM, RV32Zicsr)
 
-The [award-winning](https://riscv.org/blog/2018/12/risc-v-softcpu-contest-highlights/) [SERV](https://github.com/olofk/serv) CPU by [Olof Kindgren](https://twitter.com/OlofKindgren) is a bit-serial RISC-V CPU that is focussed on being as minimal as possible. It may not be the fastest CPU, but actually, it is also **not** the smallest RISC-V CPU in this roundup (which would be the [FemtoRV32-quark](#Quark) found further down in this post). Here, I used [SERV version 1.1.0](https://github.com/olofk/serv/tree/1.1.0) with the default configuration (rv32i).
+The [award-winning](https://riscv.org/blog/2018/12/risc-v-softcpu-contest-highlights/) [SERV](https://github.com/olofk/serv) CPU by [Olof Kindgren](https://twitter.com/OlofKindgren) is a bit-serial RISC-V CPU that is focussed on being as minimal as possible. It may not be the fastest CPU, but it is the (barely) smallest RISC-V CPU in this roundup (the other is the [FemtoRV32-quark](#Quark) found further down in this post). Here, I used [SERV version 1.1.0](https://github.com/olofk/serv/tree/1.1.0) with the default configuration (rv32i).
 
 ![SERV v1.10](images/serv110.png)
 
