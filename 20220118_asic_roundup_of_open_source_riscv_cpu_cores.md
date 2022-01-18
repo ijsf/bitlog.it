@@ -50,7 +50,7 @@ The [Minerva](https://github.com/minerva-cpu/minerva) CPU by [Lambda Concept](ht
 
 The [Hazard3](https://github.com/Wren6991/Hazard3) CPU core by [Luke Wren](https://twitter.com/wren6991) is a 3-stage RISC-V processor that also supports a bunch of optional extensions. Two different versions were used (both use [hazard3_cpu_1port](https://github.com/Wren6991/Hazard3/blob/master/hdl/hazard3_cpu_1port.v)).
 
-#### RV32I
+### RV32I
 [Configuration](https://gist.github.com/Wren6991/97eb9957c2f1ea9dbfe6fc9942b8fe28)
 
 ![Hazard3](images/hazard3_rv32i.png)
@@ -58,7 +58,7 @@ The [Hazard3](https://github.com/Wren6991/Hazard3) CPU core by [Luke Wren](https
 - Maximum clock frequency: ** MHz**
 - Die area: ** mm^2**
 
-#### RV32IMZbaZbbZbs
+### RV32IMZbaZbbZbs
 
 [Configuration](https://gist.github.com/Wren6991/7ec1663234965dd09c94a38d62b59920)
 
@@ -72,7 +72,7 @@ The [Hazard3](https://github.com/Wren6991/Hazard3) CPU core by [Luke Wren](https
 
 The [FemtoRV32](https://github.com/BrunoLevy/learn-fpga/tree/master/FemtoRV) CPU core by [Bruno Levy](https://twitter.com/BrunoLevy01) is part of his [learn-fpga](https://github.com/BrunoLevy/learn-fpga) teaching material for FPGAs and processor design. Two different versions were used: [quark](https://github.com/BrunoLevy/learn-fpga/blob/master/FemtoRV/RTL/PROCESSOR/femtorv32_quark.v) (RV32I) and [petitbateau](https://github.com/BrunoLevy/learn-fpga/blob/master/FemtoRV/RTL/PROCESSOR/femtorv32_petitbateau.v) (RV32IMFC)
 
-#### Quark (RV32I)
+### Quark (RV32I)
 
 ![FemtoRV32-quark](images/femtorv32_quark.png)
 
@@ -80,7 +80,7 @@ The [FemtoRV32](https://github.com/BrunoLevy/learn-fpga/tree/master/FemtoRV) CPU
 - Die area: **0.02964884 mm^2**
 - Utilization rate: **80.173%**
 
-#### Petitbateau (RV32IMFC)
+### Petitbateau (RV32IMFC)
 
 ![FemtoRV32-petitbateau](images/femtorv32_petitbateau.png)
 
