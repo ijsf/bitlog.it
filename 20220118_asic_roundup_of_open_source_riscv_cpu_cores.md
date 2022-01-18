@@ -12,9 +12,13 @@ While waiting for simulation results for my final paper, I thought I'd synthesiz
 - A standard I/O template was generated with Innovus with a square floorplan. This means that the area is most likely not used efficiently which will affect the utilization and maximum clock frequency.
 - Only the CPU core with the register file and a standardized bus (Wishbone, AXI, AHB, etc.) was taken into account. No full SoCs were used to make the comparisons more fair.
 
+These results are just for fun and to give a very rough estimation of what could be achieved when implemented as an ASIC. There is no SoC, no interconnect, no SRAM, no off-chip memories, etc. so take these results with a mountain of salt. Still, I think it is interesting to see how cores meant to run primarily on FPGAs map onto an ASIC.
+
+Also, since I went for the maximum clock speed, it increases the area quite a bit. To squeeze the last bit of performance out of a design, the usage of buffers shoots up, which increases area and power usage. So this choice negatively impacts cores that are optimized for area in a more disproportionate manner.
+
 ## SERV (RV32I, RV32IM, RV32Zicsr)
 
-The [award-winning](https://riscv.org/blog/2018/12/risc-v-softcpu-contest-highlights/) [SERV](https://github.com/olofk/serv) CPU by [Olof Kindgren](https://twitter.com/OlofKindgren) is a bit-serial RISC-V CPU that is focussed on being as minimal as possible. It may not be the fastest CPU, but it is indeed the smallest RISC-V CPU in this roundup (tied with the [FemtoRV32-quark](#Quark) found further down in this post). Here, I used [SERV version 1.1.0](https://github.com/olofk/serv/tree/1.1.0) with the default configuration (rv32i).
+The [award-winning](https://riscv.org/blog/2018/12/risc-v-softcpu-contest-highlights/) [SERV](https://github.com/olofk/serv) CPU by [Olof Kindgren](https://twitter.com/OlofKindgren) is a bit-serial RISC-V CPU that is focussed on being as minimal as possible. It may not be the fastest CPU, but actually, it is also **not** the smallest RISC-V CPU in this roundup (which would be the [FemtoRV32-quark](#Quark) found further down in this post). Here, I used [SERV version 1.1.0](https://github.com/olofk/serv/tree/1.1.0) with the default configuration (rv32i).
 
 ![SERV v1.10](images/serv110.png)
 
@@ -46,7 +50,7 @@ The [Minerva](https://github.com/minerva-cpu/minerva) CPU by [Lambda Concept](ht
 
 The [Hazard3](https://github.com/Wren6991/Hazard3) CPU core by [Luke Wren](https://twitter.com/wren6991) is a 3-stage RISC-V processor that also supports a bunch of optional extensions. Two different versions were used (both use [hazard3_cpu_1port](https://github.com/Wren6991/Hazard3/blob/master/hdl/hazard3_cpu_1port.v)).
 
-### RV32I
+#### RV32I
 [Configuration](https://gist.github.com/Wren6991/97eb9957c2f1ea9dbfe6fc9942b8fe28)
 
 ![Hazard3](images/hazard3_rv32i.png)
@@ -54,7 +58,7 @@ The [Hazard3](https://github.com/Wren6991/Hazard3) CPU core by [Luke Wren](https
 - Maximum clock frequency: ** MHz**
 - Die area: ** mm^2**
 
-### RV32IMZbaZbbZbs
+#### RV32IMZbaZbbZbs
 
 [Configuration](https://gist.github.com/Wren6991/7ec1663234965dd09c94a38d62b59920)
 
@@ -68,15 +72,15 @@ The [Hazard3](https://github.com/Wren6991/Hazard3) CPU core by [Luke Wren](https
 
 The [FemtoRV32](https://github.com/BrunoLevy/learn-fpga/tree/master/FemtoRV) CPU core by [Bruno Levy](https://twitter.com/BrunoLevy01) is part of his [learn-fpga](https://github.com/BrunoLevy/learn-fpga) teaching material for FPGAs and processor design. Two different versions were used: [quark](https://github.com/BrunoLevy/learn-fpga/blob/master/FemtoRV/RTL/PROCESSOR/femtorv32_quark.v) (RV32I) and [petitbateau](https://github.com/BrunoLevy/learn-fpga/blob/master/FemtoRV/RTL/PROCESSOR/femtorv32_petitbateau.v) (RV32IMFC)
 
-### Quark
+#### Quark (RV32I)
 
 ![FemtoRV32-quark](images/femtorv32_quark.png)
 
-- Maximum clock frequency: ** MHz**
-- Die area: **0.029584 mm^2**
-- Utilization rate: **81.433%**
+- Maximum clock frequency: **741 MHz**
+- Die area: **0.02964884 mm^2**
+- Utilization rate: **80.173%**
 
-### Petitbateau
+#### Petitbateau (RV32IMFC)
 
 ![FemtoRV32-petitbateau](images/femtorv32_petitbateau.png)
 
