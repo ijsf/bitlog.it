@@ -4,13 +4,6 @@ _2022/01/18 Oguz Meteer // guztech_
 
 ---
 
-***This post is part of a series:***
-
-* [Part 1 - Basic introduction to combinatorial logic](20180320_a_basic_introduction_to_clash_for_fpga_development_part_1.md)
-* [Part 2 - Bug fixes, much cleaner code, simulation, synchronous logic, and test benches](20180514_a_basic_introduction_to_clash_for_fpga_development_part_2.md)
-
----
-
 While waiting for simulation results for my final paper, I thought I'd synthesize and do place & route of several open source [RISC-V](https://riscv.org/) CPU cores for fun. Some basic information:
 
 - All CPU cores were synthesized using a well known 65 nm PDK.
