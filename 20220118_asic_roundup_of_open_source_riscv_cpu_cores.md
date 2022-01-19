@@ -60,7 +60,7 @@ The [Minerva](https://github.com/minerva-cpu/minerva) CPU by [Lambda Concept](ht
 - Die area: **0.051076 mm^2**
 - Utilization rate: **80.435%**
 
-## (WIP) Hazard3 (RV32I + M, C, A, Zicsr, Zba, Zbb, Zbc, Zbs)
+## Hazard3 (RV32I + M, C, A, Zicsr, Zba, Zbb, Zbc, Zbs)
 
 The [Hazard3](https://github.com/Wren6991/Hazard3) CPU core by [Luke Wren](https://twitter.com/wren6991) is a 3-stage RISC-V processor that also supports a bunch of optional extensions. Two different versions were used (both use [hazard3_cpu_1port](https://github.com/Wren6991/Hazard3/blob/master/hdl/hazard3_cpu_1port.v)).
 
