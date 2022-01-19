@@ -17,9 +17,22 @@ These results are just for fun and to give a very rough estimation of what could
 
 Also, since I went for the maximum clock speed, it increases the area quite a bit. To squeeze the last bit of performance out of a design, the usage of buffers shoots up, which increases area and power usage. So this choice negatively impacts cores that are optimized for area in a more disproportionate manner.
 
+# TL;DR
+
+| Core                    | Instruction set | Max. Freq. (MHz) | Die area (mm^2) |
+|-------------------------|-----------------|------------------|-----------------|
+| SERV                    | RV32I           | 1020             | 0.029584        |
+| PicoRV32                | RV32I           | 806              | 0.0425152       |
+| Minerva                 | RV32IM          | 625              | 0.051076        |
+| Hazard3                 | RV32I           | 435              | 0.037401        |
+| Hazard3                 | RV32IMZbaZbbZbs | WIP              | WIP             |
+| FemtoRV32 (quark))      | RV32I           | 741              | 0.02964884      |
+| FemtoRV32 (petitbateau) | RV32IMFC        | WIP              | WIP             |
+| Misato                  | RV32I           | WIP              | WIP             |
+
 ## SERV (RV32I, RV32IM, RV32Zicsr)
 
-The [award-winning](https://riscv.org/blog/2018/12/risc-v-softcpu-contest-highlights/) [SERV](https://github.com/olofk/serv) CPU by [Olof Kindgren](https://twitter.com/OlofKindgren) is a bit-serial RISC-V CPU that is focussed on being as minimal as possible. It may not be the fastest CPU, but it is the (barely) smallest RISC-V CPU in this roundup (the other is the [FemtoRV32-quark](#Quark) found further down in this post). Here, I used [SERV version 1.1.0](https://github.com/olofk/serv/tree/1.1.0) with the default configuration (rv32i).
+The [award-winning](https://riscv.org/blog/2018/12/risc-v-softcpu-contest-highlights/) [SERV](https://github.com/olofk/serv) CPU by [Olof Kindgren](https://twitter.com/OlofKindgren) is a bit-serial RISC-V CPU that is focussed on being as minimal as possible. It may not be the fastest CPU, but it is the (barely) smallest RISC-V CPU in this roundup (the other is the [FemtoRV32-quark](#Quark) found further down in this post). Here, I used [SERV version 1.1.0](https://github.com/olofk/serv/tree/1.1.0) with the default configuration (RV32I).
 
 ![SERV v1.10](images/serv110.png)
 
