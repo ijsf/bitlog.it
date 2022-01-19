@@ -107,7 +107,7 @@ The [FemtoRV32](https://github.com/BrunoLevy/learn-fpga/tree/master/FemtoRV) CPU
 
 ## (WIP) Misato (RV32I)
 
-The [Misato]() core developed by me is written in [Amaranth HDL](https://github.com/amaranth-lang/amaranth) and currently does not use a standardized interface (I am working on adding a Wishbone interface). It is very bare bones, but parts of it are formally verified. Currently, the core does require a single cycle instruction and data memory for it to work correctly. It is a work in progress, but I wanted to include it anyway.
+The [Misato](https://github.com/GuzTech/misato) core developed by [me](https://twitter.com/BitlogIT) is written in [Amaranth HDL](https://github.com/amaranth-lang/amaranth) and currently does not use a standardized interface (I am working on adding a Wishbone interface). It is very bare bones, but parts of it are formally verified. Currently, the core does require a single cycle instruction and data memory for it to work correctly. It is a work in progress, but I wanted to include it anyway.
 
 ![Misato](images/misato.png)
 
