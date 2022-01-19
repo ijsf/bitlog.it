@@ -56,9 +56,9 @@ The [Hazard3](https://github.com/Wren6991/Hazard3) CPU core by [Luke Wren](https
 
 ![Hazard3](images/hazard3_rv32i.png)
 
-- Maximum clock frequency: ** MHz**
-- Die area: ** mm^2**
-- Utilization rate: ** **
+- Maximum clock frequency: **435 MHz**
+- Die area: **0.037401 mm^2**
+- Utilization rate: **75.855%**
 - CoreMark/MHz: **1.13**
 
 ### RV32IMZbaZbbZbs
@@ -74,7 +74,7 @@ The [Hazard3](https://github.com/Wren6991/Hazard3) CPU core by [Luke Wren](https
 
 ## (WIP) FemtoRV32 (RV32I, RV32IM, RV32IM, RV32IMC, RV32IMFC)
 
-The [FemtoRV32](https://github.com/BrunoLevy/learn-fpga/tree/master/FemtoRV) CPU core by [Bruno Levy](https://twitter.com/BrunoLevy01) is part of his [learn-fpga](https://github.com/BrunoLevy/learn-fpga) teaching material for FPGAs and processor design. Two different versions were used: [quark](https://github.com/BrunoLevy/learn-fpga/blob/master/FemtoRV/RTL/PROCESSOR/femtorv32_quark.v) (RV32I) and [petitbateau](https://github.com/BrunoLevy/learn-fpga/blob/master/FemtoRV/RTL/PROCESSOR/femtorv32_petitbateau.v) (RV32IMFC)
+The [FemtoRV32](https://github.com/BrunoLevy/learn-fpga/tree/master/FemtoRV) CPU core by [Bruno Levy](https://twitter.com/BrunoLevy01) is part of his [learn-fpga](https://github.com/BrunoLevy/learn-fpga) teaching material for FPGAs and processor design. Two different versions were used: [quark](https://github.com/BrunoLevy/learn-fpga/blob/master/FemtoRV/RTL/PROCESSOR/femtorv32_quark.v) (RV32I) and [petitbateau](https://github.com/BrunoLevy/learn-fpga/blob/master/FemtoRV/RTL/PROCESSOR/femtorv32_petitbateau.v) (RV32IMFC). Important to note is that both versions don't use a standardized interface.
 
 ### Quark (RV32I)
 
@@ -91,6 +91,16 @@ The [FemtoRV32](https://github.com/BrunoLevy/learn-fpga/tree/master/FemtoRV) CPU
 - Maximum clock frequency: ** MHz**
 - Die area: ** mm^2**
 - Utilization rate: **%**
+
+## (WIP) Misato (RV32I)
+
+The [Misato]() core developed by me is written in [Amaranth HDL](https://github.com/amaranth-lang/amaranth) and currently does not use a standardized interface (I am working on adding a Wishbone interface). It is very bare bones, but parts of it are formally verified. Currently, the core does require a single cycle instruction and data memory for it to work correctly. It is a work in progress, but I wanted to include it anyway.
+
+![Misato](images/misato.png)
+
+- Maximum clock frequency: ** MHz** 
+- Die area: ** mm^2**
+- Utilization rate: ** %**
 
 - - -
 
