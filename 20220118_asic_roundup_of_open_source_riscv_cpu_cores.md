@@ -80,9 +80,9 @@ The [Hazard3](https://github.com/Wren6991/Hazard3) CPU core by [Luke Wren](https
 
 ![Hazard3](images/hazard3_rv32imzbazbbzbs.png)
 
-- Maximum clock frequency: ** MHz**
-- Die area: ** mm^2**
-- Utilization rate: **%**
+- Maximum clock frequency: **400 MHz**
+- Die area: **0.05211128 mm^2**
+- Utilization rate: **77.937%**
 - CoreMark/MHz: **3.02**
 
 ## (WIP) FemtoRV32 (RV32I, RV32IM, RV32IM, RV32IMC, RV32IMFC)
