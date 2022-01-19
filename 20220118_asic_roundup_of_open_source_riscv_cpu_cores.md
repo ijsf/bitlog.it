@@ -11,6 +11,7 @@ While waiting for simulation results for my final paper, I thought I'd synthesiz
 - Cadence Innovus was used for place & route.
 - A standard I/O template was generated with Innovus with a square floorplan. This means that the area is most likely not used efficiently which will affect the utilization and maximum clock frequency.
 - Only the CPU core with the register file and a standardized bus (Wishbone, AXI, AHB, etc.) was taken into account. No full SoCs were used to make the comparisons more fair.
+- The goal was maximum clock frequency.
 
 These results are just for fun and to give a very rough estimation of what could be achieved when implemented as an ASIC. There is no SoC, no interconnect, no SRAM, no off-chip memories, etc. so take these results with a mountain of salt. Still, I think it is interesting to see how cores meant to run primarily on FPGAs map onto an ASIC.
 
@@ -57,6 +58,8 @@ The [Hazard3](https://github.com/Wren6991/Hazard3) CPU core by [Luke Wren](https
 
 - Maximum clock frequency: ** MHz**
 - Die area: ** mm^2**
+- Utilization rate: ** **
+- CoreMark/MHz: **1.13**
 
 ### RV32IMZbaZbbZbs
 
@@ -67,6 +70,7 @@ The [Hazard3](https://github.com/Wren6991/Hazard3) CPU core by [Luke Wren](https
 - Maximum clock frequency: ** MHz**
 - Die area: ** mm^2**
 - Utilization rate: **%**
+- CoreMark/MHz: **3.02**
 
 ## (WIP) FemtoRV32 (RV32I, RV32IM, RV32IM, RV32IMC, RV32IMFC)
 
