@@ -25,7 +25,7 @@ Also, since I went for the maximum clock speed, it increases the area quite a bi
 | PicoRV32                | RV32I           | 806              | 0.0425152       |
 | Minerva                 | RV32IM          | 625              | 0.051076        |
 | Hazard3                 | RV32I           | 435              | 0.037401        |
-| Hazard3                 | RV32IMZbaZbbZbs | WIP              | WIP             |
+| Hazard3                 | RV32IMZbaZbbZbs | 400              | 0.05211128      |
 | FemtoRV32 (quark))      | RV32I           | 741              | 0.02964884      |
 | FemtoRV32 (petitbateau) | RV32IMFC        | WIP              | WIP             |
 | Misato                  | RV32I           | WIP              | WIP             |
