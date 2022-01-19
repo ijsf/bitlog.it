@@ -28,7 +28,7 @@ Also, since I went for the maximum clock speed, it increases the area quite a bi
 | Hazard3                 | RV32IMZbaZbbZbs | 400              | 0.05211128      |
 | FemtoRV32 (quark))      | RV32I           | 741              | 0.02964884      |
 | FemtoRV32 (petitbateau) | RV32IMFC        | WIP              | WIP             |
-| Misato                  | RV32I           | WIP              | WIP             |
+| Misato                  | RV32I           | 667              | 0.04652624      |
 
 ## SERV (RV32I, RV32IM, RV32Zicsr)
 
@@ -105,15 +105,15 @@ The [FemtoRV32](https://github.com/BrunoLevy/learn-fpga/tree/master/FemtoRV) CPU
 - Die area: ** mm^2**
 - Utilization rate: **%**
 
-## (WIP) Misato (RV32I)
+## Misato (RV32I)
 
 The [Misato](https://github.com/GuzTech/misato) core developed by [me](https://twitter.com/BitlogIT) is written in [Amaranth HDL](https://github.com/amaranth-lang/amaranth) and currently does not use a standardized interface (I am working on adding a Wishbone interface). It is very bare bones, but parts of it are formally verified. Currently, the core does require a single cycle instruction and data memory for it to work correctly. It is a work in progress, but I wanted to include it anyway.
 
 ![Misato](images/misato.png)
 
-- Maximum clock frequency: ** MHz** 
-- Die area: ** mm^2**
-- Utilization rate: ** %**
+- Maximum clock frequency: **667 MHz** 
+- Die area: **0.04652624 mm^2**
+- Utilization rate: **64.553%**
 
 - - -
 
