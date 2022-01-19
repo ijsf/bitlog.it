@@ -29,6 +29,7 @@ Also, since I went for the maximum clock speed, it increases the area quite a bi
 | FemtoRV32 (quark))      | RV32I           | 741              | 0.02964884      |
 | FemtoRV32 (petitbateau) | RV32IMFC        | WIP              | WIP             |
 | Misato                  | RV32I           | 667              | 0.04652624      |
+| Misato (sky130)         | RV32I           | < 100            | ?               |
 
 ## SERV (RV32I, RV32IM, RV32Zicsr)
 
@@ -114,6 +115,15 @@ The [Misato](https://github.com/GuzTech/misato) core developed by [me](https://t
 - Maximum clock frequency: **667 MHz** 
 - Die area: **0.04652624 mm^2**
 - Utilization rate: **64.553%**
+
+### SkyWater 130 nm version
+[Olof Kindgren](https://twitter.com/OlofKindgren) added [FuseSoC](https://github.com/olofk/fusesoc) support for Misato, which means it can now also be built with the SkyWater 130 nm PDK!
+
+![Misato](images/misato_sky130.png)
+
+- Maximum clock frequency: **< 100 MHz**
+- Die area: **?**
+- Utilization rate: **?**
 
 - - -
 
