@@ -28,6 +28,7 @@ Also, since I went for the maximum clock speed, it increases the area quite a bi
 | Hazard3                 | RV32IMZbaZbbZbs | 400              | 0.05211128      |
 | FemtoRV32 (quark))      | RV32I           | 741              | 0.02964884      |
 | FemtoRV32 (petitbateau) | RV32IMFC        | WIP              | WIP             |
+| VexRiscv (min)          | RV32I           | 606              | 0.04276588      |
 | Misato                  | RV32I           | 667              | 0.04652624      |
 | Misato (sky130)         | RV32I           | < 100            | ?               |
 
@@ -105,6 +106,16 @@ The [FemtoRV32](https://github.com/BrunoLevy/learn-fpga/tree/master/FemtoRV) CPU
 - Maximum clock frequency: ** MHz**
 - Die area: ** mm^2**
 - Utilization rate: **%**
+
+## VexRiscv
+
+The [VexRiscv](https://github.com/SpinalHDL/VexRiscv/) CPU core by [Charles Papon](https://twitter.com/dolu1990) is an [award-winning](https://riscv.org/blog/2018/12/risc-v-softcpu-contest-highlights/) core that is written in [SpinalHDL](https://github.com/SpinalHDL) which is also being developed by him. It is one of the most flexible and best performing RISC-V implementations, capable of being able to [run Linux](https://github.com/litex-hub/linux-on-litex-vexriscv). It is used by default in [LiteX](https://github.com/enjoy-digital/litex).
+
+![VexRiscv (min)](images/vexriscv_min.png)
+
+- Maximum clock frequency: **606 MHz** 
+- Die area: **0.04276588 mm^2**
+- Utilization rate: **79.093%**
 
 ## Misato (RV32I)
 
