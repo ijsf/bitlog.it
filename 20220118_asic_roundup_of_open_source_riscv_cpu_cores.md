@@ -29,8 +29,9 @@ Also, since I went for the maximum clock speed, it increases the area quite a bi
 | FemtoRV32 (quark))      | RV32I           | 741              | 0.02964884      |
 | FemtoRV32 (petitbateau) | RV32IMFC        | WIP              | WIP             |
 | VexRiscv (min)          | RV32I           | 606              | 0.04276588      |
+| VexRiscv (IMAG)         | RV32IMAC        | 526              | 1.17332208      |
 | Misato                  | RV32I           | 667              | 0.04652624      |
-| Misato (sky130)         | RV32I           | < 100            | ?               |
+| Misato (sky130)         | RV32I           | 75               | 0.25            |
 
 ## SERV (RV32I, RV32IM, RV32Zicsr)
 
@@ -109,13 +110,21 @@ The [FemtoRV32](https://github.com/BrunoLevy/learn-fpga/tree/master/FemtoRV) CPU
 
 ## VexRiscv
 
-The [VexRiscv](https://github.com/SpinalHDL/VexRiscv/) CPU core by [Charles Papon](https://twitter.com/dolu1990) is an [award-winning](https://riscv.org/blog/2018/12/risc-v-softcpu-contest-highlights/) core that is written in [SpinalHDL](https://github.com/SpinalHDL) which is also being developed by him. It is one of the most flexible and best performing RISC-V implementations, capable of being able to [run Linux](https://github.com/litex-hub/linux-on-litex-vexriscv). It is used by default in [LiteX](https://github.com/enjoy-digital/litex).
+The [VexRiscv](https://github.com/SpinalHDL/VexRiscv/) CPU core by [Charles Papon](https://twitter.com/dolu1990) is an [award-winning](https://riscv.org/blog/2018/12/risc-v-softcpu-contest-highlights/) core that is written in [SpinalHDL](https://github.com/SpinalHDL) which is also being developed by him. It is one of the most flexible and best performing RISC-V implementations, capable of being able to [run Linux](https://github.com/litex-hub/linux-on-litex-vexriscv). It is used by default in [LiteX](https://github.com/enjoy-digital/litex). Two different configurations were used: [min](https://github.com/litex-hub/pythondata-cpu-vexriscv/blob/master/pythondata_cpu_vexriscv/verilog/VexRiscv_Min.v) (RV32I) and [IMAC](https://github.com/litex-hub/pythondata-cpu-vexriscv/blob/master/pythondata_cpu_vexriscv/verilog/VexRiscv_IMAC.v) (RV32IMAC).
 
+### VexRiscv (min)
 ![VexRiscv (min)](images/vexriscv_min.png)
 
 - Maximum clock frequency: **606 MHz** 
 - Die area: **0.04276588 mm^2**
 - Utilization rate: **79.093%**
+
+### VexRiscv (IMAC)
+![VecRisc (IMAC)](images/vexriscv_imac.png)
+
+- Maximum clock frequency: **526 MHz**
+- Die area: **1.17332208 mm^2**
+- Utilization rate: **82.824%**
 
 ## Misato (RV32I)
 
@@ -130,11 +139,11 @@ The [Misato](https://github.com/GuzTech/misato) core developed by [me](https://t
 ### SkyWater 130 nm version
 [Olof Kindgren](https://twitter.com/OlofKindgren) added [FuseSoC](https://github.com/olofk/fusesoc) support for Misato, which means it can now also be built with the SkyWater 130 nm PDK!
 
-![Misato](images/misato_sky130.png)
+![Misato](images/misato_sky130_75mhz.png)
 
-- Maximum clock frequency: **< 100 MHz**
-- Die area: **?**
-- Utilization rate: **?**
+- Maximum clock frequency: **75 MHz**
+- Die area: **0.25**
+- Utilization rate: **70%**
 
 - - -
 
