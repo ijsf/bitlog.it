@@ -2,6 +2,7 @@ Welcome to our series of articles about all things technology.
 
 Here's our index:
 
+* 2026/02/08: [AX88772B on Windows 98: Teaching an Old Driver New Tricks (2026)](20260208_ax88772b_on_windows_98_teaching_an_old_driver_new_tricks.md)
 * 2024/04/15: [Back Up Android Apps and Data in Modern Times (2024)](20240415_back_up_android_apps_and_data_in_modern_times_2024.md)
 * 2022/01/18: [ASIC roundup of open source RISC-V CPU cores](20220118_asic_roundup_of_open_source_riscv_cpu_cores.md)
 * 2018/05/14: [A Basic Introduction to Clash for FPGA Development - Part 2](20180514_a_basic_introduction_to_clash_for_fpga_development_part_2.md)
@@ -28,4 +29,4 @@ Contributors:
 
 Hosted at [github.com](https://github.com/ijsf/bitlog.it).
 
-© Combined Efforts, 2014 - 2024. All rights reserved.
+© Combined Efforts, 2014 - 2026. All rights reserved.
